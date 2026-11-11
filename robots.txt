@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /img/
+Disallow: /video/
+Disallow: /fonts/
+
+Sitemap: https://franciscoimperial.com/sitemap.xml

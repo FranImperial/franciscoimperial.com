@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Francisco Imperial · Diseñador gráfico y desarrollador</title>
+  <meta name="description" content="Portafolio de Francisco Imperial: diseño gráfico, dirección de arte, gráfica aplicada a producto, editorial, identidad y 3D. Ahora también desarrollo de aplicaciones (DAM + DAW).">
+  <!-- Seguridad: solo se cargan recursos propios (y las fuentes de Google); sin enlaces de referencia hacia fuera ni indexado de imágenes -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-B0QZdWO9zFfJ0/MtgCdgH2i2s/mCzvJLNpeJu+aNueE='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="noimageindex">
+  <link rel="canonical" href="https://franciscoimperial.com/">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Francisco Imperial">
+  <meta property="og:title" content="Francisco Imperial · Diseñador gráfico y desarrollador">
+  <meta property="og:description" content="Portafolio de Francisco Imperial: diseño gráfico, dirección de arte, gráfica aplicada a producto, editorial, identidad y 3D. Ahora también desarrollo de aplicaciones (DAM + DAW).">
+  <meta property="og:url" content="https://franciscoimperial.com/">
+  <meta property="og:image" content="https://franciscoimperial.com/img/compartir.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="img/logo-imperial.webp?v=2">
+  <link rel="stylesheet" href="styles.css?v=44">
+  <!-- La animación de entrada solo se ve la primera vez en cada sesión -->
+  <script>try{if(sessionStorage.getItem('intro'))document.documentElement.classList.add('intro-seen');sessionStorage.setItem('intro','1')}catch(e){}</script>
+</head>
+<body>
+
+  <!-- ANIMACIÓN DE ENTRADA: pantalla negra, aparece el logo, el contador llega a 100 y la cortina sube (se salta con un clic o Esc) -->
+  <div class="intro" aria-hidden="true">
+    <span class="intro__logo"></span>
+    <span class="intro__tag">Diseño gráfico · Dirección de arte · Desarrollo</span>
+    <span class="intro__count"></span>
+    <span class="intro__bar"></span>
+  </div>
+
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="nav">
+    <a href="#inicio" class="nav__logo" aria-label="Imperial, ir al inicio">Imperial</a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav aria-label="Principal">
+      <ul class="nav__links" id="menu">
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#contacto" class="nav__cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero hero--film" id="inicio">
+      <picture class="hero__media">
+        <source media="(max-aspect-ratio: 4/5)" srcset="img/noche-0159-600.webp 600w, img/noche-0159-1200.webp 1200w" sizes="100vw">
+        <source media="(max-aspect-ratio: 5/4)" srcset="img/hero-noche-cuadrada-800.webp 800w, img/hero-noche-cuadrada-1600.webp 1600w" sizes="100vw">
+        <img src="img/hero-noche-1280.webp" srcset="img/hero-noche-1280.webp 1280w, img/hero-noche-2560.webp 2560w" sizes="100vw" width="2560" height="1600" alt="Retrato de la serie Noche de Reyes: dos personajes maquillados se miran entre cañas de bambú" fetchpriority="high">
+      </picture>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__content">
+        <a class="hero__project" href="#codigo"><span>00</span> Esta web también es un proyecto: la diseñé y la programé yo <span aria-hidden="true">→</span></a>
+        <h1 class="hero__name"><span class="line"><span>Francisco</span></span> <span class="line"><span>Imperial</span></span></h1>
+        <div class="hero__foot">
+          <p class="hero__roles" aria-label="Diseñador gráfico, director de arte y desarrollador web">
+            <span aria-hidden="true">Diseñador gráfico</span>
+            <span class="roles" aria-hidden="true"><span>Director de arte</span><span>Desarrollador web</span><span>Fotógrafo</span><span>Director de arte</span></span>
+          </p>
+          <div class="hero__actions">
+            <a href="#proyectos" class="btn">Ver proyectos</a>
+            <a href="cv-francisco-imperial.pdf" class="btn btn--ghost" download="CV-Francisco-Jose-Imperial-Disenador-Grafico.pdf">Descargar CV</a>
+          </div>
+        </div>
+        <a class="hero__credit" href="noche-de-reyes.html">Imagen · Noche de Reyes, fotografía <span aria-hidden="true">→</span></a>
+        <span class="hero__scroll" aria-hidden="true">Scroll</span>
+      </div>
+    </section>
+
+    <!-- PRESENTACIÓN: una frase grande, como en los portfolios de referencia -->
+    <section class="statement" aria-label="Presentación">
+      <p class="statement__status">Abierto a nuevos proyectos y equipos</p>
+      <p class="statement__text">
+        <strong class="hook">Diseño que se fabrica y se programa.</strong>
+        Gráfica para cascos de Burger King, Cabify, MOVO o Shiro Helmets, identidad, editorial y fotografía.
+        Ahora también desarrollo: estudio DAM + DAW y esta web la he construido yo.
+      </p>
+      <ul class="statement__services" aria-label="Qué hago">
+        <li>Diseño y desarrollo web</li><li>Dirección de arte</li><li>Gráfica aplicada a producto</li><li>Identidad y editorial</li><li>Fotografía</li>
+      </ul>
+    </section>
+
+    <!-- MARCAS: la lista se duplica para que el bucle no tenga cortes; la copia la ignora el lector de pantalla -->
+    <section class="brands" aria-label="Marcas para las que he trabajado">
+      <button class="brands__pause" type="button" aria-pressed="false">Pausar</button>
+      <div class="brands__track">
+        <ul class="brands__list">
+          <li>Burger King</li><li>Telepizza</li><li>Acciona</li><li>Popeyes</li><li>Cabify</li><li>MOVO</li><li>Shiro Helmets</li><li>Opoesquemas</li>
+        </ul>
+        <ul class="brands__list" aria-hidden="true">
+          <li>Burger King</li><li>Telepizza</li><li>Acciona</li><li>Popeyes</li><li>Cabify</li><li>MOVO</li><li>Shiro Helmets</li><li>Opoesquemas</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="projects">
+      <div class="section-head">
+        <p class="eyebrow">Trabajo seleccionado</p>
+        <h2>Proyectos</h2>
+      </div>
+      <ol class="index">
+        <li style="--accent: var(--green-deep)"><a href="#codigo"><span class="index__num">00</span><span class="index__title">Esta web</span><span class="index__meta">Diseño · Código · Vibe coding</span><img class="index__thumb" src="img/esta-web-900.webp" width="900" height="563" alt="" loading="lazy"></a></li>
+        <li style="--accent: var(--orange)"><a href="#producto"><span class="index__num">01</span><span class="index__title">Gráfica aplicada a producto</span><span class="index__meta">Cascos · Arte final · 3D</span><img class="index__thumb" src="img/kioto-final-600.webp" width="600" height="545" alt="" loading="lazy"></a></li>
+        <li style="--accent: var(--lavender)"><a href="#editorial"><span class="index__num">02</span><span class="index__title">Editorial</span><span class="index__meta">Catálogos · Libros · Carteles</span><img class="index__thumb" src="img/cartel-hasta-manana-600.webp" width="600" height="848" alt="" loading="lazy"></a></li>
+        <li style="--accent: var(--teal)"><a href="#identidad"><span class="index__num">03</span><span class="index__title">Identidad gráfica</span><span class="index__meta">Fikapaus · Härex</span><img class="index__thumb" src="img/fika-collage-900.webp" width="900" height="506" alt="" loading="lazy"></a></li>
+        <li style="--accent: var(--pink)"><a href="#tres-d"><span class="index__num">04</span><span class="index__title">3D</span><span class="index__meta">Tipografía inflable · Render</span><img class="index__thumb" src="img/tipo-oferta-600.webp" width="600" height="904" alt="" loading="lazy"></a></li>
+        <li style="--accent: var(--cobalt)"><a href="#fotografia"><span class="index__num">05</span><span class="index__title">Fotografía</span><span class="index__meta">Arquitectura · Producto · Moda</span><img class="index__thumb" src="img/ocre-torre-cielo-800.webp" width="800" height="1200" alt="" loading="lazy"></a></li>
+        <li style="--accent: var(--coral)"><a href="#video"><span class="index__num">06</span><span class="index__title">Vídeo y animación</span><span class="index__meta">Videoclips · Motion</span><img class="index__thumb" src="img/harex-globo-800.webp" width="800" height="520" alt="" loading="lazy"></a></li>
+        <li style="--accent: var(--violet)"><a href="#laboratorio"><span class="index__num">07</span><span class="index__title">Laboratorio</span><span class="index__meta">IA · Tipografías propias</span><img class="index__thumb" src="img/ia-collage-900.webp" width="900" height="506" alt="" loading="lazy"></a></li>
+      </ol>
+
+      <article class="chapter" id="codigo" style="--accent: var(--green-deep)">
+        <a class="chapter__media" href="como-hice-esta-web.html" tabindex="-1" aria-hidden="true"><img width="1800" height="1125" src="img/esta-web-900.webp" srcset="img/esta-web-900.webp 900w, img/esta-web-1800.webp 1800w" sizes="100vw" alt="Portada de esta web: foto de Noche de Reyes con el nombre Francisco Imperial encima" loading="lazy" style="--pos: 50% 30%"></a>
+        <div class="chapter__body">
+          <div class="chapter__title">
+            <span class="project__num">00</span>
+            <h3>Esta web</h3>
+          </div>
+          <div class="chapter__text">
+            <p><strong class="hook">Diseñada y programada por mí.</strong> HTML, CSS y JavaScript con vibe coding y <strong>Claude</strong>: yo dirijo, reviso y audito; la IA escribe código que no se publica hasta que lo he comprobado.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Vibe coding</li><li>Accesibilidad</li></ul>
+            <div class="chapter__links"><a class="btn chapter__cta" href="como-hice-esta-web.html">Ver cómo la hice <span aria-hidden="true">→</span></a></div>
+          </div>
+        </div>
+      </article>
+      <article class="chapter" id="producto" style="--accent: var(--orange)">
+        <a class="chapter__media" href="producto.html" tabindex="-1" aria-hidden="true"><img width="1800" height="1012" src="img/grafica-collage-900.webp" srcset="img/grafica-collage-900.webp 900w, img/grafica-collage-1800.webp 1800w" sizes="100vw" alt="Collage de cascos con gráficas para Burger King, Telepizza y Shiro" loading="lazy" style="--pos: 50% 50%"></a>
+        <div class="chapter__body">
+          <div class="chapter__title">
+            <span class="project__num">01</span>
+            <h3>Gráfica aplicada a producto</h3>
+          </div>
+          <div class="chapter__text">
+            <p><strong class="hook">Del boceto a la cadena de producción.</strong> Cascos y equipamiento para <strong>Burger King, Acciona, Cabify, MOVO, Telepizza, Popeyes y Shiro Helmets</strong>. Unos 70 modelos lanzados, producidos con fábricas de China, India, Pakistán, Turquía y Sudamérica.</p>
+            <ul class="tags"><li>Producto</li><li>Arte final</li><li>Ilustración</li><li>3D</li></ul>
+            <div class="chapter__links"><a class="btn chapter__cta" href="producto.html">Ver proyecto <span aria-hidden="true">→</span></a><a class="chapter__more" href="shiro.html">Caso Shiro Helmets <span aria-hidden="true">→</span></a></div>
+          </div>
+        </div>
+      </article>
+      <article class="chapter" id="editorial" style="--accent: var(--lavender)">
+        <a class="chapter__media" href="editorial.html" tabindex="-1" aria-hidden="true"><img width="2400" height="1350" src="img/cover-editorial-1200.webp" srcset="img/cover-editorial-1200.webp 1200w, img/cover-editorial-2400.webp 2400w" sizes="100vw" alt="Cuatro carteles: Hasta mañana, LVMF, Empowering Riders y Shiro retro" loading="lazy" style="--pos: 50% 50%"></a>
+        <div class="chapter__body">
+          <div class="chapter__title">
+            <span class="project__num">02</span>
+            <h3>Editorial</h3>
+          </div>
+          <div class="chapter__text">
+            <p><strong class="hook">Que se entienda a la primera.</strong> Catálogos, manuales, folletos y libros de texto, con infografías que ahorran párrafos. Y carteles: cine, festivales y campañas.</p>
+            <ul class="tags"><li>Maquetación</li><li>Catálogos</li><li>Infografía</li><li>Cartelería</li></ul>
+            <div class="chapter__links"><a class="btn chapter__cta" href="editorial.html">Ver proyecto <span aria-hidden="true">→</span></a></div>
+          </div>
+        </div>
+      </article>
+      <article class="chapter" id="identidad" style="--accent: var(--teal)">
+        <a class="chapter__media" href="identidad.html" tabindex="-1" aria-hidden="true"><img width="2000" height="1062" src="img/fika-fachada-1000.webp" srcset="img/fika-fachada-1000.webp 1000w, img/fika-fachada-2000.webp 2000w" sizes="100vw" alt="Fachada de la cafetería Fikapaus con su identidad aplicada" loading="lazy" style="--pos: 50% 50%"></a>
+        <div class="chapter__body">
+          <div class="chapter__title">
+            <span class="project__num">03</span>
+            <h3>Identidad gráfica</h3>
+          </div>
+          <div class="chapter__text">
+            <p><strong class="hook">Marcas con algo que contar.</strong> Identidades completas como <strong>Fikapaus</strong> y <strong>Härex</strong>, packaging y sellos para <strong>Shiro Helmets</strong> y etiquetas como la del vino Costwerduo.</p>
+            <ul class="tags"><li>Branding</li><li>Packaging</li><li>Merchandising</li></ul>
+            <div class="chapter__links"><a class="btn chapter__cta" href="identidad.html">Ver proyecto <span aria-hidden="true">→</span></a><a class="chapter__more" href="fikapaus.html">Fikapaus <span aria-hidden="true">→</span></a><a class="chapter__more" href="harex.html">Härex <span aria-hidden="true">→</span></a></div>
+          </div>
+        </div>
+      </article>
+      <article class="chapter" id="tres-d" style="--accent: var(--pink)">
+        <a class="chapter__media" href="tres-d.html" tabindex="-1" aria-hidden="true"><img width="1800" height="1010" src="img/3d-collage-900.webp" srcset="img/3d-collage-900.webp 900w, img/3d-collage-1800.webp 1800w" sizes="100vw" alt="Collage de tipografía inflable en 3D" loading="lazy" style="--pos: 50% 50%"></a>
+        <div class="chapter__body">
+          <div class="chapter__title">
+            <span class="project__num">04</span>
+            <h3>3D</h3>
+          </div>
+          <div class="chapter__text">
+            <p><strong class="hook">Si lo imagino, lo modelo.</strong> Modelado, materiales, luz, animación y cámara. Todo en <strong>Blender</strong>.</p>
+            <ul class="tags"><li>Blender</li><li>Modelado</li><li>Render</li><li>Animación</li></ul>
+            <div class="chapter__links"><a class="btn chapter__cta" href="tres-d.html">Ver proyecto <span aria-hidden="true">→</span></a></div>
+          </div>
+        </div>
+      </article>
+      <article class="chapter" id="fotografia" style="--accent: var(--cobalt)">
+        <a class="chapter__media" href="fotografia.html" tabindex="-1" aria-hidden="true"><img width="1600" height="1066" src="img/ocre-torre-cielo-800.webp" srcset="img/ocre-torre-cielo-800.webp 800w, img/ocre-torre-cielo-1600.webp 1600w" sizes="100vw" alt="Torre de hormigón ocre contra el cielo, de la serie ocre" loading="lazy" style="--pos: 50% 50%"></a>
+        <div class="chapter__body">
+          <div class="chapter__title">
+            <span class="project__num">05</span>
+            <h3>Fotografía</h3>
+          </div>
+          <div class="chapter__text">
+            <p><strong class="hook">Geometría y luz.</strong> Arquitectura buscando el ritmo de las fachadas, producto para <strong>Shiro Helmets</strong>, procesos analógicos y la serie de moda <strong>Noche de Reyes</strong>.</p>
+            <ul class="tags"><li>Arquitectura</li><li>Producto</li><li>Moda</li><li>Cianotipia</li></ul>
+            <div class="chapter__links"><a class="btn chapter__cta" href="fotografia.html">Ver proyecto <span aria-hidden="true">→</span></a><a class="chapter__more" href="noche-de-reyes.html">Noche de Reyes <span aria-hidden="true">→</span></a></div>
+          </div>
+        </div>
+      </article>
+      <article class="chapter" id="video" style="--accent: var(--coral)">
+        <a class="chapter__media" href="video.html" tabindex="-1" aria-hidden="true"><video muted loop playsinline data-hover-play preload="none" width="1280" height="720" poster="img/poster-avdeo-web.webp" aria-hidden="true" disablepictureinpicture disableremoteplayback><source src="video/avdeo-web.mp4" type="video/mp4"></video></a>
+        <div class="chapter__body">
+          <div class="chapter__title">
+            <span class="project__num">06</span>
+            <h3>Vídeo y animación</h3>
+          </div>
+          <div class="chapter__text">
+            <p><strong class="hook">Lo que se mueve, se recuerda.</strong> Para <strong>AVDEO</strong>, plataforma de vídeo para y por la música electrónica: animación del logotipo, cuatro videoclips y la presentación de su web.</p>
+            <ul class="tags"><li>Motion graphics</li><li>Videoclip</li><li>Edición</li></ul>
+            <div class="chapter__links"><a class="btn chapter__cta" href="video.html">Ver los vídeos <span aria-hidden="true">→</span></a></div>
+          </div>
+        </div>
+      </article>
+      <article class="chapter" id="laboratorio" style="--accent: var(--violet)">
+        <a class="chapter__media" href="laboratorio.html" tabindex="-1" aria-hidden="true"><img width="1800" height="1012" src="img/ia-collage-900.webp" srcset="img/ia-collage-900.webp 900w, img/ia-collage-1800.webp 1800w" sizes="100vw" alt="Collage de imágenes generadas con IA" loading="lazy" style="--pos: 50% 50%"></a>
+        <div class="chapter__body">
+          <div class="chapter__title">
+            <span class="project__num">07</span>
+            <h3>Laboratorio</h3>
+          </div>
+          <div class="chapter__text">
+            <p><strong class="hook">Aquí pruebo cosas.</strong> IA con <strong>Claude</strong> como herramienta principal, además de ChatGPT, Gemini, Nano Banana, Midjourney y Firefly; impresión 3D y tres tipografías propias.</p>
+            <ul class="tags"><li>IA generativa</li><li>Impresión 3D</li><li>Tipografía</li></ul>
+            <div class="chapter__links"><a class="btn chapter__cta" href="laboratorio.html">Ver proyecto <span aria-hidden="true">→</span></a></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="about">
+      <div class="about__photo">
+        <img width="960" height="1200" src="img/fran-nueva-480.webp" srcset="img/fran-nueva-480.webp 480w, img/fran-nueva-960.webp 960w" sizes="(max-width: 900px) 360px, 480px" alt="Francisco Imperial sonriendo, con gorra y gafas de sol, en un jardín botánico" loading="lazy">
+      </div>
+      <div class="about__text">
+        <p class="eyebrow">Sobre mí</p>
+        <h2>Del píxel<br>al código.</h2>
+        <p>
+          Soy diseñador gráfico especializado en dirección de arte. Llevo más de seis años creando
+          producto, editorial e identidad para marcas reales, y he aprendido mucho de los profesionales
+          con los que he trabajado. Lo audiovisual y la publicidad son mi pasión, en clase y fuera de ella.
+        </p>
+        <p>
+          Ahora sumo la programación. Estudio <strong>DAM + DAW</strong> para diseñar productos digitales
+          y también construirlos. Busco un equipo donde unir las dos cosas: dirección de arte,
+          diseño de interfaces o desarrollo front-end.
+        </p>
+        <ul class="skills">
+          <li>Diseño gráfico</li><li>Dirección de arte</li><li>Ilustración</li><li>Fotografía</li>
+          <li>Motion graphics</li><li>Audiovisual</li><li>Lettering</li><li>Diseño de tipografías</li>
+          <li>Diseño 3D</li><li>Gráfica aplicada a producto</li><li>Diseño web</li><li>Design thinking</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section class="experience" data-nav="sobre-mi">
+      <div class="section-head">
+        <p class="eyebrow">Trayectoria</p>
+        <h2>Experiencia</h2>
+      </div>
+      <ol class="timeline">
+        <li>
+          <span class="timeline__date">2021 — 2024</span>
+          <div>
+            <h3>Shiro Helmets</h3>
+            <p class="timeline__role">Diseñador gráfico y de producto</p>
+            <p>Unos 70 modelos de casco lanzados para público general y empresas, con producción en China, India, Pakistán, Turquía y Sudamérica. Gráficas de producto y de ropa, identidad, modelado y texturizado 3D, publicidad para redes, fotografía de producto y moda, dirección artística, maquetación de catálogos y auditoría de producto y diseño.</p>
+          </div>
+        </li>
+        <li>
+          <span class="timeline__date">2016 — 2021</span>
+          <div>
+            <h3>Fotógrafo freelance</h3>
+            <p class="timeline__role">Fotografía</p>
+            <p>Moda, producto para redes sociales y eventos.</p>
+          </div>
+        </li>
+        <li>
+          <span class="timeline__date">2019 — 2020</span>
+          <div>
+            <h3>El Rincón del Policía / Opoesquemas</h3>
+            <p class="timeline__role">Diseñador gráfico senior y maquetador</p>
+            <p>Maquetación de libros, agendas y esquemas; ilustración, animación, audiovisuales y publicidad.</p>
+          </div>
+        </li>
+        <li>
+          <span class="timeline__date">2018</span>
+          <div>
+            <h3>Taller Creativo Patografyco</h3>
+            <p class="timeline__role">Diseñador gráfico en prácticas</p>
+            <p>Campañas publicitarias, packaging, adaptación gráfica para el evento Info 2018 y redes sociales.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- FORMACIÓN -->
+    <section id="formacion" class="education">
+      <div class="section-head">
+        <p class="eyebrow">Aprendizaje continuo</p>
+        <h2>Formación</h2>
+      </div>
+
+      <article class="edu-now">
+        <span class="badge">En curso</span>
+        <h3>DAM + DAW</h3>
+        <p class="edu-now__full">Ciclos Formativos de Grado Superior en Desarrollo de Aplicaciones Multiplataforma y Desarrollo de Aplicaciones Web</p>
+        <p class="edu-now__where">Universae · 2026 — actualidad</p>
+        <p>
+          El paso natural después de años diseñando interfaces y piezas digitales: aprender a programarlas.
+          Desarrollo para escritorio, móvil y web, bases de datos y despliegue.
+        </p>
+        <ul class="tags"><li>Programación</li><li>Bases de datos</li><li>Lenguajes de marcas</li><li>Entornos de desarrollo</li></ul>
+      </article>
+
+      <div class="edu-grid">
+        <article class="edu-card">
+          <span class="edu-card__date">2019 — 2020</span>
+          <h3>Máster en Diseño y Dirección de Arte</h3>
+          <p>ESDesign · Barcelona</p>
+        </article>
+        <article class="edu-card">
+          <span class="edu-card__date">2014 — 2019</span>
+          <h3>Grado en Diseño Gráfico</h3>
+          <p>Escuela Superior de Diseño · Murcia</p>
+        </article>
+        <article class="edu-card edu-card--list">
+          <span class="edu-card__date">Formación complementaria</span>
+          <dl>
+            <dt>En curso</dt>
+            <dd>React · Python · Git y GitHub</dd>
+            <dt>Completados</dt>
+            <dd>IA aplicada (Claude, ChatGPT, Gemini y GPTs personalizados)</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact is-dark">
+      <p class="eyebrow">Contacto</p>
+      <h2>¿Hablamos?</h2>
+      <div class="contact__inner">
+        <p class="contact__lead">¿Tienes un proyecto o una vacante? Escríbeme y te contesto en menos de 24 h.</p>
+        <div class="contact__links">
+          <a class="contact__mail" href="mailto:franciscojoseimperial@gmail.com">franciscojoseimperial@gmail.com</a>
+          <a class="contact__phone" href="tel:+34617726166">+34 617 726 166</a>
+          <a class="contact__phone" href="https://www.linkedin.com/in/francisco-jos%C3%A9-imperial-gomariz-396188113/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+          <a class="btn contact__cv" href="cv-francisco-imperial.pdf" download="CV-Francisco-Jose-Imperial-Disenador-Grafico.pdf">Descargar CV (PDF)</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Francisco José Imperial Gomariz</span>
+    <span class="footer__links"><a class="footer__mail" href="mailto:franciscojoseimperial@gmail.com">franciscojoseimperial@gmail.com</a><a class="footer__mail" href="https://www.linkedin.com/in/francisco-jos%C3%A9-imperial-gomariz-396188113/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden"> (se abre en otra pestaña)</span></a></span>
+    <a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Imagen ampliada">
+    <button class="lightbox__close" aria-label="Cerrar imagen">×</button>
+    <img alt="">
+  </dialog>
+
+  <script src="script.js?v=19"></script>
+</body>
+</html>

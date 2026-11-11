@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cómo hice esta web · Programación y vibe coding · Francisco Imperial</title>
+  <meta name="description" content="Caso de estudio: cómo diseñé y programé este portfolio con HTML, CSS y JavaScript y vibe coding con Claude, y las auditorías de diseño, accesibilidad y seguridad que pasó.">
+  <!-- Seguridad: solo se cargan recursos propios (y las fuentes de Google); sin enlaces de referencia hacia fuera ni indexado de imágenes -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-B0QZdWO9zFfJ0/MtgCdgH2i2s/mCzvJLNpeJu+aNueE='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="noimageindex">
+  <link rel="canonical" href="https://franciscoimperial.com/como-hice-esta-web.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Francisco Imperial">
+  <meta property="og:title" content="Cómo hice esta web · Programación y vibe coding">
+  <meta property="og:description" content="Caso de estudio: cómo diseñé y programé este portfolio con HTML, CSS y JavaScript y vibe coding con Claude, y las auditorías de diseño, accesibilidad y seguridad que pasó.">
+  <meta property="og:url" content="https://franciscoimperial.com/como-hice-esta-web.html">
+  <meta property="og:image" content="https://franciscoimperial.com/img/compartir.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=44">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="nav">
+    <a href="index.html" class="nav__logo" aria-label="Imperial, ir a la portada">Imperial</a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav aria-label="Principal">
+      <ul class="nav__links" id="menu">
+        <li><a href="index.html#proyectos" aria-current="true">Proyectos</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="index.html#formacion">Formación</a></li>
+        <li><a href="index.html#contacto" class="nav__cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="case-hero case-hero--cover" style="--accent: var(--green-deep); --on-accent: #fff">
+      <div class="case-hero__media"><img width="1800" height="1125" src="img/esta-web-900.webp" srcset="img/esta-web-900.webp 900w, img/esta-web-1800.webp 1800w" sizes="100vw" alt="Portada de esta web" fetchpriority="high" style="--pos: 50% 20%"></div>
+      <div class="case-hero__intro">
+        <a class="case-back" href="index.html#codigo"><span aria-hidden="true">←</span> Todos los proyectos</a>
+        <p class="eyebrow">Proyecto · 00 Esta web · Programación y vibe coding</p>
+        <h1 class="case-title">Cómo hice<br>esta web</h1>
+        <p class="case-lead">Diseñada y programada por mí con HTML, CSS y JavaScript, sin plantillas ni frameworks, usando el vibe coding con Claude como herramienta principal.</p>
+      </div>
+      <dl class="case-facts">
+        <div><dt>Mi papel</dt><dd>Diseño, dirección y desarrollo</dd></div>
+        <div><dt>Tecnología</dt><dd>HTML, CSS y JavaScript sin frameworks</dd></div>
+        <div><dt>IA</dt><dd>Claude (Claude Code) como herramienta principal</dd></div>
+        <div><dt>Publicación</dt><dd>Hosting propio, sFTP y DNS configurados por mí</dd></div>
+      </dl>
+    </section>
+
+    <!-- EL ENCARGO -->
+    <section class="case-block case-block--violet">
+      <div class="case-split">
+        <h2>El reto</h2>
+        <div class="case-text">
+          <p>Necesitaba un portfolio que enseñara mi trabajo de diseño y, a la vez, demostrara lo que estoy aprendiendo en <strong>DAM + DAW</strong>. La mejor prueba de que sé programar una web es la propia web.</p>
+          <p>Lo hice con <strong>vibe coding</strong>: describo lo que quiero, la IA escribe el código y yo lo dirijo, lo reviso, lo pruebo y lo corrijo. No me quedo con la primera versión: cada cambio se comprueba en el navegador, en escritorio y en móvil, antes de darlo por bueno.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUÉ HICE -->
+    <section class="case-block case-block--teal">
+      <h2>Qué hice</h2>
+      <ul class="case-tasks">
+        <li class="case-task">Arquitectura de la información</li>
+        <li class="case-task">Diseño visual y sistema de color</li>
+        <li class="case-task">HTML semántico y CSS</li>
+        <li class="case-task">JavaScript sin librerías</li>
+        <li class="case-task">Accesibilidad</li>
+        <li class="case-task">Optimización de imágenes y vídeo</li>
+        <li class="case-task">Seguridad web</li>
+        <li class="case-task">Despliegue y DNS</li>
+      </ul>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="case-block case-block--pink">
+      <h2>Proceso</h2>
+      <ol class="case-steps">
+        <li class="case-step">
+          <span class="case-step__num">01</span>
+          <div>
+            <h3>Contenido y dirección</h3>
+            <p>Partí de mi CV y del portfolio en PDF. Yo decidía qué contar, qué proyectos entraban y cómo debía sentirse la web; la IA proponía y yo revisaba cada propuesta antes de aceptarla.</p>
+          </div>
+          <ul class="code-checks"><li>Estructura: portada, proyectos, sobre mí, formación y contacto</li><li>Textos revisados frase a frase</li><li>Datos reales: nada inventado, todo contrastado con mis archivos</li></ul>
+        </li>
+        <li class="case-step">
+          <span class="case-step__num">02</span>
+          <div>
+            <h3>Diseño sin neutros</h3>
+            <p>Los colores salen de las portadas de mi portfolio: cada proyecto es un capítulo de su color a todo el ancho, y el menú cambia de color según la sección que tiene debajo.</p>
+          </div>
+          <ul class="code-checks"><li>Paleta en variables CSS</li><li>Tipografía Archivo y tres tipografías propias</li><li>Animación de entrada y apariciones suaves</li></ul>
+        </li>
+        <li class="case-step">
+          <span class="case-step__num">03</span>
+          <div>
+            <h3>Investigación y mejoras</h3>
+            <p>Estudié portfolios profesionales y apliqué las mejoras de una en una, aprobándolas yo antes de pasar a la siguiente.</p>
+          </div>
+          <ul class="code-checks"><li>Casos de estudio: encargo, proceso y resultado</li><li>Portada de 52 a 24 pantallas</li><li>Una página propia para cada proyecto largo</li></ul>
+        </li>
+        <li class="case-step">
+          <span class="case-step__num">04</span>
+          <div>
+            <h3>Auditorías</h3>
+            <p>Pasé la web por varias revisiones y corregí lo que encontraron, comprobando cada arreglo en el navegador.</p>
+          </div>
+          <ul class="code-checks"><li>Textos de interfaz (UX copy)</li><li>Crítica de diseño</li><li>Accesibilidad WCAG 2.1 AA: contraste, teclado, lector de pantalla, foco</li><li>Revisión UI/UX y de rendimiento</li><li>Seguridad y protección del contenido</li></ul>
+        </li>
+        <li class="case-step">
+          <span class="case-step__num">05</span>
+          <div>
+            <h3>Rendimiento</h3>
+            <p>Las imágenes y los vídeos son lo más pesado de un portfolio, así que cada uno se prepara para la web.</p>
+          </div>
+          <ul class="code-checks"><li>Imágenes WebP en dos tamaños con srcset</li><li>Medidas explícitas: la página no salta al cargar</li><li>Carga diferida de imágenes y vídeos</li><li>Vídeos de más de 600 MB comprimidos a 47 MB</li></ul>
+        </li>
+        <li class="case-step">
+          <span class="case-step__num">06</span>
+          <div>
+            <h3>Seguridad</h3>
+            <p>Una web estática tiene poca superficie de ataque, pero aun así la protegí y quité todo lo que no hacía falta.</p>
+          </div>
+          <ul class="code-checks"><li>Política de seguridad de contenido (CSP)</li><li>Cabeceras de seguridad en el servidor</li><li>Sin listado de carpetas ni enlaces externos a mis imágenes</li><li>Imágenes sin metadatos ni ubicación GPS</li></ul>
+        </li>
+        <li class="case-step">
+          <span class="case-step__num">07</span>
+          <div>
+            <h3>Publicación</h3>
+            <p>La subí a mi propio hosting y dominio, configurando yo el servidor.</p>
+          </div>
+          <ul class="code-checks"><li>Subida por sFTP cifrado con un script propio</li><li>DNS del dominio y del correo corporativo</li><li>Página de error 404, sitemap y robots.txt</li></ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- LO QUE SE ROMPIÓ -->
+    <section class="case-block case-block--violet">
+      <div class="case-split">
+        <h2>Errores que encontré y corregí</h2>
+        <div class="case-text">
+          <p>Parte del trabajo es saber ver lo que falla. Algunos de los fallos que detecté al probar la web y cómo quedaron resueltos:</p>
+          <ul class="code-fixes"><li>El menú fijo «saltaba» al abrirse en el móvil</li><li>Las anclas del menú se quedaban cortas porque la página cambiaba de alto al cargar</li><li>Las imágenes con fondo transparente salían negras</li><li>En el móvil, los bloques muy altos nunca llegaban a aparecer</li><li>Los vídeos pasaban por debajo del texto al hacer scroll</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTADO -->
+    <section class="case-block case-block--green">
+      <h2>Resultado</h2>
+      <ul class="case-stats">
+        <li><strong>0</strong><span>frameworks ni plantillas: todo el código está hecho para esta web</span></li>
+        <li><strong>9</strong><span>páginas: portada, seis proyectos, este caso y la página de error</span></li>
+        <li><strong>−92 %</strong><span>de peso en vídeo, de más de 600 MB a 47 MB</span></li>
+        <li><strong>52 → 24</strong><span>pantallas de alto en la portada tras la auditoría</span></li>
+      </ul>
+    </section>
+
+    <section class="case-next">
+      <a href="index.html#contacto">
+        <span class="eyebrow">Siguiente</span>
+        <span class="case-next__title">Contacto <span aria-hidden="true">→</span></span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Francisco José Imperial Gomariz</span>
+    <span class="footer__links"><a class="footer__mail" href="mailto:franciscojoseimperial@gmail.com">franciscojoseimperial@gmail.com</a><a class="footer__mail" href="https://www.linkedin.com/in/francisco-jos%C3%A9-imperial-gomariz-396188113/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden"> (se abre en otra pestaña)</span></a></span>
+    <a href="#main">Volver arriba <span aria-hidden="true">↑</span></a>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Imagen ampliada">
+    <button class="lightbox__close" aria-label="Cerrar imagen">×</button>
+    <img alt="">
+  </dialog>
+
+  <script src="script.js?v=19"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Repositorio público solo con el código.
+# Las piezas (imágenes y vídeos), las tipografías propias (diseñadas en equipo) y el CV
+# no se publican aquí: solo se ven dentro de https://franciscoimperial.com
+img/
+video/
+fonts/
+*.pdf
+*.psd
+*.ai
+
+# Sistema e iCloud
+.DS_Store
+* [0-9].*

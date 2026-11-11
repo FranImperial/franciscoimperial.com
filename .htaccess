@@ -1,0 +1,71 @@
+# ─────────────────────────────────────────────────────────────
+#  franciscoimperial.com · configuración del servidor (Apache)
+# ─────────────────────────────────────────────────────────────
+
+# Sin listado de carpetas y página propia para los errores 404
+Options -Indexes
+ErrorDocument 404 /404.html
+DirectoryIndex index.html
+
+# ── HTTPS ────────────────────────────────────────────────────
+# Activo desde el 11/11/2026 (certificado SSL de Sectigo). Todo va a https://franciscoimperial.com:
+# 1) www → sin www; 2) http → https. Se mira también X-Forwarded-Proto por si el hosting
+# termina el SSL en un proxy (así no hay bucle). La dirección temporal del hosting no se toca.
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.franciscoimperial\.com$ [NC]
+RewriteRule ^ https://franciscoimperial.com%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^franciscoimperial\.com$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://franciscoimperial.com%{REQUEST_URI} [L,R=301]
+
+# ── Protección de las piezas ─────────────────────────────────
+# Las imágenes, vídeos y fuentes solo se sirven dentro de esta web (otras webs no pueden enlazarlas).
+# Se permite la petición sin «Referer» (navegadores con privacidad) y la imagen para compartir en redes.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_REFERER} !^$
+  RewriteCond %{HTTP_REFERER} !^https?://((www\.)?franciscoimperial\.com|home-5012821677\.webspace-host\.com)/ [NC]
+  RewriteCond %{REQUEST_URI} !^/img/compartir\.jpg$
+  RewriteRule \.(webp|png|jpe?g|mp4|woff2)$ - [F,NC]
+</IfModule>
+
+# Archivos ocultos (como este) y de sistema: inaccesibles
+<FilesMatch "^\.|\.(DS_Store|bak|psd|ai|zip)$">
+  Require all denied
+</FilesMatch>
+
+# ── Cabeceras de seguridad ───────────────────────────────────
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  # Impide que otra web meta esta dentro de un marco (la CSP de las páginas no puede hacerlo desde <meta>)
+  Header always set Content-Security-Policy "frame-ancestors 'self'"
+  # HSTS: el navegador usará siempre https durante un año (sin includeSubDomains, para no afectar al correo)
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header unset X-Powered-By
+</IfModule>
+
+# ── Rendimiento: compresión y caché ──────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/xml text/plain
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  # CSS y JS llevan ?v=N en el enlace, así que pueden guardarse mucho tiempo
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType video/mp4 "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+AddType image/webp .webp
+AddType font/woff2 .woff2
+AddType video/mp4 .mp4
